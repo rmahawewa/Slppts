@@ -15,6 +15,16 @@ student_add.addEventListener("click", function(){
     content.innerHTML = add_Student;
 });
 
+let student_info = {
+    id: "1",
+    student_name: "RDM",
+    student_id: "421160864",
+    current_year: "3",
+    year_of_entarance: "2021",
+    course: "Bsc in IT",
+    GPA:"2.78",
+}
+
 // let student_info = student_info;
 student_edit_form.addEventListener("click", function(student_info){ //json_inforation
     let form = student_edit(student_info).student_edit_form;
