@@ -70,3 +70,43 @@ export function student_edit(student_info){
 
         return {student_edit_form};
 }
+
+
+export function studentView(student_info){
+    console.log(student_info);
+
+
+
+    let student_view_table = `
+    <table border="1">
+    <caption>Students information</caption>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>student name</th>
+        <th>student code</th>
+        <th>current year</th>
+        <th>year of entarance</th>
+        <th>course</th>
+        <th>current gpa</th>
+        <th>VIEW</th>
+        <th>EDIT</th>
+    </tr>
+    </thead>
+    <tbody>`;
+
+    student_info.forEach(element => {
+        student_view_table += `<tr>`;
+        Object.values(element).forEach(value => {
+            student_view_table += `<td>`+ (value) +`</td>`;            
+        });
+        let id=Object.values(element.id);
+        student_view_table += `<td><button class="view" id=`+ id +`>VIEW</button></td>`;
+        student_view_table += `<td><button class="edit" id=`+ id +`>EDIT</button></td>`;
+        student_view_table += `</tr>`;
+    });
+
+    student_view_table += `</table>`;
+
+    return {student_view_table};
+}
