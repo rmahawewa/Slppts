@@ -2,6 +2,7 @@ import "./style.css";
 import {add_Student} from "./student/student.js";
 import {student_edit} from "./student/student.js";
 import {studentView} from "./student/student.js";
+import {specific_student_view} from "./student/student.js";
 import {student_info} from "./data.js";
 
 
@@ -37,6 +38,16 @@ content.addEventListener("click", function(e){
         let index = Number(id) - 1;
         let form = student_edit(student_info[index]).student_edit_form;
         content.innerHTML = form;
+    }
+    if(e.target.getAttribute("class") !== null && e.target.getAttribute("class").toString().localeCompare("view") === 0 ){
+        let id = e.target.getAttribute("id");
+        let index = Number(id) - 1;
+        let form = specific_student_view(student_info[index]).single_student_view;
+        content.innerHTML = form;
+    }
+    if(e.target.getAttribute("id") !== null && e.target.getAttribute("id").toString().localeCompare("view_all_students_btn") === 0 ){
+        let table_data = studentView(student_info).student_view_table;
+        content.innerHTML = table_data;
     }
 
 });

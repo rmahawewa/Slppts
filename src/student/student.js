@@ -62,7 +62,7 @@ export function student_edit(student_info){
         </div>
         <div class="form_element butns">
         <button type="submit" id="submit_btn">Submit</button>
-        <button id="clear">Clear</button>
+        <button id="view_all_students_btn">Go back</button>
         </div>
         </div>
         </form>
@@ -71,6 +71,44 @@ export function student_edit(student_info){
         return {student_edit_form};
 }
 
+export function specific_student_view(student_info){
+    let student_name = student_info.student_name;
+    let student_id = student_info.student_id;
+    let current_year = student_info.current_year;
+    let year_of_entarance = student_info.year_of_entarance;
+    let course = student_info.course;
+    let current_gpa = student_info.current_gpa;
+
+
+    let single_student_view = `
+        <h1>Edit Student Record</h1>
+        <div class="form_content">
+        <div class="form_element">
+        <label class="topic">Student name</label><label  name="student_name" id="student_name">`+ student_name +`</label>
+        </div>
+        <div class="form_element">
+        <label class="topic">Student number</label><label  name="student_id" id="student_id">`+ student_id +`</label>
+        </div>
+        <div class="form_element">
+        <label class="topic">Student current year</label><label  name="current_year" id="current_year">`+ current_year +`</label>
+        </div>
+        <div class="form_element">
+        <label class="topic">Year of entarance</label><label  name="year_of_entarance" id="year_of_entarance">`+ year_of_entarance +`</label>
+        </div>
+        <div class="form_element">
+        <label class="topic">Course</label><label  name="course" id"course">`+ course +`</label>
+        </div>
+        <div class="form_element">
+        <label class="topic">Current GPA</label><label  name="current_gpa" id="current_gpa">`+ current_gpa +`</label>
+        </div>
+        <div class="form_element butns">
+        <button id="view_all_students_btn">Go back</button>
+        </div>
+        </div>
+            `;
+
+        return {single_student_view};
+}
 
 export function studentView(student_info){
     console.log(student_info);
