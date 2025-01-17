@@ -5,6 +5,10 @@ import {studentView} from "./student/student.js";
 import {specific_student_view} from "./student/student.js";
 import {student_info} from "./data.js";
 
+import {add_Student_Year} from "./student_year/student_year.js";
+
+import {add_Course} from "./course/course.js";
+
 
 let content = document.querySelector(".detailed-content");
 // content.innerHTML = add_Student;
@@ -12,6 +16,19 @@ let content = document.querySelector(".detailed-content");
 let student_view = document.querySelector("#student_view");
 let student_add = document.querySelector("#student_add");
 let student_edit_form = document.querySelector("#student_edit");
+
+let add_student_year = document.querySelector("#student_year_add");
+
+let course = document.querySelector("#course_add");
+
+course.addEventListener("click", function(){
+    content.innerHTML = add_Course;
+});
+
+add_student_year.addEventListener("click", function(){
+    content.innerHTML = add_Student_Year;
+});
+
 
 student_add.addEventListener("click", function(){
     content.innerHTML = add_Student;
