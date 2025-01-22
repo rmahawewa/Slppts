@@ -102,3 +102,11 @@ input{
     padding: 0.5rem;
 }
 
+select{
+    font-size: medium;
+    border-radius: 0.5rem;
+    width:21rem;
+    height: 2rem;
+    padding: 0.5rem;
+}
+

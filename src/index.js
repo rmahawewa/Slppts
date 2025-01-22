@@ -7,7 +7,24 @@ import {student_info} from "./data.js";
 
 import {add_Student_Year} from "./student_year/student_year.js";
 
-import {add_Course} from "./course/course.js";
+// import {add_Course} from "./course/course.js";
+import {add_Subject} from "./subject/subject.js";
+
+import {add_Degree} from "./degree/degree.js";
+
+import {add_Semester} from "./semester/semester.js";
+
+import {add_subject_semester} from "./subject_semester/subject_semester.js";
+
+import {add_module} from "./Module/module.js";
+
+import {add_lesson} from "./lesson/lesson.js";
+
+import {add_assignment} from "./assignments/assignments.js";
+
+import {add_student_degree} from "./student_enroll_degree/studentDegree.js";
+
+import {add_student_semester} from "./student_semester.js/studentSemester.js";
 
 
 let content = document.querySelector(".detailed-content");
@@ -19,10 +36,66 @@ let student_edit_form = document.querySelector("#student_edit");
 
 let add_student_year = document.querySelector("#student_year_add");
 
-let course = document.querySelector("#course_add");
+let addSubject = document.querySelector("#student_subject_add");
 
-course.addEventListener("click", function(){
-    content.innerHTML = add_Course;
+let addDegree = document.querySelector("#degree_add");
+ 
+let addSemester = document.querySelector("#semester_add");
+
+let subjectSemester = document.querySelector("#subject_semester_add");
+
+let module_add = document.querySelector("#module_add");
+
+let addLesson = document.querySelector("#lesson_add");
+
+let addAssignment = document.querySelector("#assignment_add");
+
+let addStudentDegree = document.querySelector("#student_degree_add");
+
+let student_semester_add = document.querySelector("#student_semester_add");
+
+
+
+// let course = document.querySelector("#course_add");
+
+student_semester_add.addEventListener("click", function(){
+    content.innerHTML = add_student_semester;
+});
+
+addStudentDegree.addEventListener("click", function(){
+    content.innerHTML = add_student_degree;
+});
+
+addAssignment.addEventListener("click", function(){
+    content.innerHTML = add_assignment;
+});
+
+addLesson.addEventListener("click", function(){
+    content.innerHTML = add_lesson;
+});
+
+module_add.addEventListener("click", function(){
+    content.innerHTML = add_module;
+});
+
+subjectSemester.addEventListener("click", function(){
+    content.innerHTML = add_subject_semester;
+});
+
+addSemester.addEventListener("click", function(){
+    content.innerHTML = add_Semester;
+});
+
+addSubject.addEventListener("click", function(){
+    content.innerHTML = add_Subject;
+});
+
+// course.addEventListener("click", function(){
+//     content.innerHTML = add_Course;
+// });
+
+addDegree.addEventListener("click", function(){
+    content.innerHTML = add_Degree;
 });
 
 add_student_year.addEventListener("click", function(){
