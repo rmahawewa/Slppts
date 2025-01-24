@@ -33,7 +33,7 @@ h1, .left-navbar{
 }
 .detailed-content{
     grid-column: 2 / 7;
-    background-color: rgb(125, 124, 143);
+    background-color: white;
     padding: 2rem;
 }
 .footer{
@@ -100,6 +100,7 @@ input{
     width:20rem;
     height: 1rem;
     padding: 0.5rem;
+    border: 1px solid darkolivegreen;
 }
 
 select{
