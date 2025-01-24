@@ -26,6 +26,10 @@ import {add_student_degree} from "./student_enroll_degree/studentDegree.js";
 
 import {add_student_semester} from "./student_semester.js/studentSemester.js";
 
+import {add_student_lesson} from "./lesson_student/lesson_student.js";
+
+import {add_student_assignment} from "./student_assignment/student_assignment.js";
+
 
 let content = document.querySelector(".detailed-content");
 // content.innerHTML = add_Student;
@@ -54,9 +58,21 @@ let addStudentDegree = document.querySelector("#student_degree_add");
 
 let student_semester_add = document.querySelector("#student_semester_add");
 
+let lesson_student_add = document.querySelector("#lesson_student_add");
+
+let student_assignment_add = document.querySelector("#student_assignment_add");
+
 
 
 // let course = document.querySelector("#course_add");
+
+student_assignment_add.addEventListener("click", function(){
+    content.innerHTML = add_student_assignment;
+});
+
+lesson_student_add.addEventListener("click", function() {
+    content.innerHTML = add_student_lesson;
+});
 
 student_semester_add.addEventListener("click", function(){
     content.innerHTML = add_student_semester;
